@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("Script Loaded"); // Debugging step
+
     const form = document.getElementById("registration-form");
     const feedbackDiv = document.getElementById("form-feedback");
+
+    if (!form || !feedbackDiv) {
+        console.error("Form or feedbackDiv not found");
+        return;
+    }
 
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent form submission
